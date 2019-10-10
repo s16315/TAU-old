@@ -1,4 +1,4 @@
-package java.tm.gameRepo.domain;
+package main.java.pl.tmnich.gamescatalog.domain;
 
 class Entity {
     private int id;

@@ -1,12 +1,13 @@
-package java.tm.gameRepo.domain;
+package main.java.pl.tmnich.gamescatalog.domain;
 
 class PEGI extends Entity{
     private String name;
     private String description;
 
-    public PEGI(String name, String description) {
+    public PEGI(String name, String description, int id) {
         this.name = name;
         this.description = description;
+        this.setId(id);
     }
 
     public String getName() {

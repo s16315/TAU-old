@@ -1,8 +1,8 @@
-package java.tm.gameRepo;
+package main.java.pl.tmnich.gamescatalog.service;
 
-import java.tm.gameRepo.domain.Game;
+import main.java.pl.tmnich.gamescatalog.domain.Game;
+
 import java.util.List;
-import java.util.stream.Collector;
 
 public class GamesService {
     private List<Game> gamesList;
@@ -12,7 +12,7 @@ public class GamesService {
     }
 
     public void addGame(Game game){
-        gamesList.add(game);
+        if (GetGameById(game.getId()) != null) gamesList.add(game);
     }
     public Game GetGameById(int id){
         return gamesList.stream().filter(g -> g.getId() == id).findFirst().orElse(null);

@@ -1,4 +1,4 @@
-package java.tm.gameRepo.domain;
+package main.java.pl.tmnich.gamescatalog.domain;
 
 public class Game extends Entity {
 
@@ -6,14 +6,16 @@ public class Game extends Entity {
     private PEGI pegi;
     private Boolean haveDemo;
 
-    public Game(String name, PEGI pegi, Boolean haveDemo) {
+    public Game(String name, PEGI pegi, Boolean haveDemo, int id) {
         this.name = name;
         this.pegi = pegi;
         this.haveDemo = haveDemo;
+        this.setId(id);
     }
-    public Game(String name, PEGI pegi) {
+    public Game(String name, PEGI pegi, int id) {
         this.name = name;
         this.pegi = pegi;
+        this.setId(id);
         this.haveDemo = false;
     }
 
